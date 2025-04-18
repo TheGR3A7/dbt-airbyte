@@ -1,0 +1,21 @@
+version: 2
+
+
+models:
+  - name: stg_airbyte_raw
+    columns:
+      - name: temperature_c
+        description: "Температура в °C (диапазон: -40..50)"
+        tests:
+          - not_null
+          - in_range:
+              min_value: -40
+              max_value: 50
+              
+      - name: humidity_pct
+        description: "Относительная влажность в % (0..100)"
+        tests:
+          - not_null
+          - in_range:
+              min_value: 0
+              max_value: 100

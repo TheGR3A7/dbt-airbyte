@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: fact_weather_daily
+    columns:
+      - name: date
+        description: "Дата измерения"
+        tests:
+          - not_null
+          - unique
+      - name: avg_temp
+        description: "Средняя температура"
+      - name: max_temp
+        description: "Макс. температура"
+      - name: min_temp
+        description: "Мин. температура"
+      - name: avg_humidity
+        description: "Средняя влажность"

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: airbyte_raw
+    schema: public
+    tables:
+      - name: src_csv_weather
+        description: "Raw data from Airbyte CSV import"
